@@ -1,13 +1,30 @@
-# deepcube-full
+# README.MD
 
-> A full stack project realized by flask for deploying the DeepCubeA algorithm in own server and visualize.
+本项目直接部署在阿里云服务器上，具体环境需求如下：
 
-## Usage
-1. download the trained model from references follows, put in right file path(/code/savedModels/...).
-2. run `python server.py` in /interface/, to deploy website in current device.
-3. open web page with url [127.0.0.1:5000](127.0.0.1:5000), port can be edited in /interface/server.py bottom line.
+## 环境需求:
 
-## References
-[1] Agostinelli, Forest, et al. "Solving the Rubik’s cube with deep reinforcement learning and search." Nature Machine Intelligence 1.8 (2019): 356-363.[[link]](https://www.nature.com/articles/s42256-019-0070-z.epdf?shared_access_token=-pCSsZa_J9bM8VyXLZLRctRgN0jAjWel9jnR3ZoTv0Osb8UCgUm5AQaSCMHWqWzsyV3KBcb13SAW-9IL1pAGd1HcSk40JSEjhoaBAi0ePvYh_5Dul6LvK0oJY1KI0ULo9O9HCut_y7aCTc93Th8m5g%3D%3D)
+在以下环境中测试通过：
 
-[2] [DeepCubeA](https://codeocean.com/capsule/5723040/tree/v1) Source Code.
+1. `ubuntu20.04`
+2. `ubuntu18.04`
+
+在ubuntu中，您可以使用该指令配置环境
+
+```
+apt-get install python
+apt-get install build-essential
+apt-get install libboost-all-dev
+apt-get install libboost-dev
+apt-get install python-pip
+pip install -r deepcube/environment/requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+```
+
+## 1. 在服务器上部署服务
+
+1. `cd deepcube/interface`
+2. 执行 `python server.py`
+
+## 2.测试
+
+1. 见演示视频或访问`http://39.97.212.230:5000/`
